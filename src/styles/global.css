@@ -1,0 +1,24 @@
+:root {
+  --primary: #7dd3fc;   /* light blue */
+  --secondary: #22c55e; /* green */
+
+  --text: #1f2937;
+  --background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
