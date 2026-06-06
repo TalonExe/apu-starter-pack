@@ -1,24 +1,25 @@
-<nav>
-  <a href="/apu-starter-pack">Home</a>
-  <a href="/apu-starter-pack/locations">Locations</a>
-  <a href="/apu-starter-pack/teams">Teams</a>
+<nav
+  class="sticky top-0 z-50 bg-sky-300/90 backdrop-blur border-b border-sky-400"
+>
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <a href="/" class="font-bold text-slate-800"> APU Starter Pack </a>
+
+    <div class="flex gap-6">
+      <a class="hover:text-green-600 transition-colors" href="/"> Home </a>
+
+      <a
+        class="hover:text-green-600 transition-colors"
+        href="/apu-starter-pack/orientation"
+      >
+        Locations
+      </a>
+
+      <a
+        class="hover:text-green-600 transition-colors"
+        href="/apu-starter-pack/services"
+      >
+        Teams
+      </a>
+    </div>
+  </div>
 </nav>
-
-<style>
-  nav {
-    background: var(--primary);
-    padding: 1rem 2rem;
-    display: flex;
-    gap: 2rem;
-  }
-
-  a {
-    color: #0f172a;
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  a:hover {
-    color: var(--secondary);
-  }
-</style>
