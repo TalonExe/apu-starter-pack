@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const plugpoints = [
+  {
+    image: "/images/plugpoint-1.jpg",
+    caption: "Plugpoints near study areas",
+  },
+  {
+    image: "/images/plugpoint-2.jpg",
+    caption: "Charging spots around common spaces",
+  },
+  {
+    image: "/images/plugpoint-3.jpg",
+    caption: "Useful plugpoints for long study sessions",
+  },
+];
+---
+
+<Layout title="Plugpoints">
+  <section class="py-10">
+    <div
+      class="mb-10 flex flex-col items-center gap-6 text-left md:flex-row md:items-center md:justify-between"
+    >
+      <div class="max-w-2xl flex-1">
+        <h3 class="text-2xl font-extrabold text-slate-800">
+          Your battery percentage too low? No worries!
+        </h3>
+
+        <h3 class="mt-2 text-2xl font-extrabold text-slate-800">
+          Here are the spots where you can charge your devices:
+        </h3>
+      </div>
+
+      <img
+        src="/src/assets/cat-with-phone.png"
+        alt="cat with phone"
+        class="w-30 shrink-0 md:w-30 lg:w-40"
+      />
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-3">
+      {
+        plugpoints.map((item) => (
+          <figure class="overflow-hidden rounded-3xl bg-white shadow-md">
+            <img
+              src={item.image}
+              alt={item.caption}
+              class="h-64 w-full object-cover"
+            />
+
+            <figcaption class="p-5 text-center font-semibold text-slate-700">
+              {item.caption}
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

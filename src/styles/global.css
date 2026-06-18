@@ -24,3 +24,11 @@ main {
   margin: 0 auto;
   padding: 2rem;
 }
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}

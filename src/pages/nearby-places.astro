@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const nearbyPlaces = [
+  {
+    image: "/images/nearby-1.jpg",
+    caption: "Cafes near campus",
+  },
+  {
+    image: "/images/nearby-2.jpg",
+    caption: "Convenience stores",
+  },
+  {
+    image: "/images/nearby-3.jpg",
+    caption: "Food spots",
+  },
+  {
+    image: "/images/nearby-4.jpg",
+    caption: "Hangout areas",
+  },
+];
+---
+
+<Layout title="Nearby Places">
+  <section class="py-10">
+    <div class="mb-10 text-center">
+      <h1 class="text-4xl font-extrabold text-slate-800">
+        Nearby Places
+      </h1>
+
+      <p class="mt-3 text-slate-600">
+        Useful places around campus for food, errands, studying, and relaxing.
+      </p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2">
+      {nearbyPlaces.map((place) => (
+        <figure class="overflow-hidden rounded-3xl bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl">
+          <img
+            src={place.image}
+            alt={place.caption}
+            class="h-72 w-full object-cover"
+          />
+
+          <figcaption class="p-5 text-center text-xl font-bold text-slate-800">
+            {place.caption}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+</Layout>

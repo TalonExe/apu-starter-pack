@@ -3,7 +3,37 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Home">
-  <h1>New Student Help Hub</h1>
+  <section class="min-h-[calc(100vh-80px)] grid md:grid-cols-2 bg-slate-50">
+  <div class="h-72 md:h-auto">
+    <img
+      src="/src/assets/APU-front.png"
+      alt="APU campus"
+      class="h-full w-full object-cover"
+    />
+  </div>
 
-  <p>Welcome to the university help portal.</p>
+  <div class="flex items-center justify-center px-8 py-16">
+    <div class="max-w-xl">
+      <p class="mb-4 font-semibold text-green-600">
+        Welcome to your campus guide
+      </p>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-slate-800">
+        APU Starter Pack
+      </h1>
+
+      <p class="mt-6 text-lg text-slate-600">
+        Find important places, plugpoints, event team channels, and nearby spots
+        around campus.
+      </p>
+
+      <a
+        href="/map"
+        class="mt-8 inline-block rounded-full bg-green-500 px-6 py-3 font-semibold text-white transition hover:bg-green-600"
+      >
+        Explore Map
+      </a>
+    </div>
+  </div>
+</section>
 </Layout>
