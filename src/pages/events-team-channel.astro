@@ -1,36 +1,53 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+import arrow from "../assets/arrow.png";
+import catWithLaptop from "../assets/cat-with-laptop.png";
+import eventsTeams from "../assets/events-teams.png";
 ---
 
 <Layout title="Teams">
-<section class="min-h-[calc(100vh-80px)] grid md:grid-cols-2 bg-slate-50">
-  <div class="flex items-center justify-center px-8 py-16">
-    <div class="max-w-xl">
-      <p class="mb-4 font-semibold text-green-600">
-        Stay updated
-      </p>
-
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-slate-800">
-        Events Team Channel
-      </h1>
-
-      <p class="mt-6 text-lg text-slate-600">
-        Join the events team channel to keep track of upcoming activities,
-        student events, campus announcements, and opportunities to get involved.
-      </p>
-
-      <img src="/src/assets/arrow.png" alt="">
-      <img src="/src/assets/cat-with-laptop.png" alt="">
+  <section class="min-h-[calc(100vh-80px)] grid grid-cols-1 bg-slate-50 md:grid-cols-2">
+    <!-- Image half -->
+    <div class="min-h-[50vh] overflow-hidden md:min-h-[calc(100vh-80px)]">
+      <img
+        src={eventsTeams.src}
+        alt="Events team channel"
+        class="h-full w-full object-contain"
+      />
     </div>
-  </div>
+    <!-- Text half -->
+    <div class="flex min-h-[50vh] items-center justify-center px-6 py-12 md:min-h-[calc(100vh-80px)] md:px-12 lg:px-16">
+      <div class="relative w-full max-w-xl">
+        <p class="mb-4 font-semibold text-green-600">
+          Stay updated
+        </p>
 
-  <div class="h-60 md:h-auto">
-    <img
-      src="/src/assets/events-teams.png"
-      alt="Events team channel"
-      class="h-full w-full"
-    />
-  </div>
-</section>
+        <h1 class="text-4xl font-extrabold leading-tight text-slate-800 sm:text-5xl lg:text-6xl">
+          Events Team Channel
+        </h1>
+
+        <p class="mt-6 max-w-lg text-base leading-relaxed text-slate-600 sm:text-lg">
+          Join the events team channel to keep track of upcoming activities,
+          student events, campus announcements, and opportunities to get involved.
+        </p>
+
+        <div class="mt-8 flex items-end gap-6">
+          <img
+            src={arrow.src}
+            alt=""
+            class="hidden w-24 rotate-6 md:block lg:w-32"
+          />
+
+          <img
+            src={catWithLaptop.src}
+            alt="Cat with laptop"
+            class="w-32 sm:w-40 lg:w-48"
+          />
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
 </Layout>
