@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import Apufront from "../assets/APU-front.png";
 ---
 
 <Layout title="Home">
   <section class="min-h-[calc(100vh-80px)] grid md:grid-cols-2 bg-slate-50">
   <div class="h-72 md:h-auto">
     <img
-      src="/src/assets/APU-front.png"
+      src={Apufront.src}
       alt="APU campus"
       class="h-full w-full object-contain"
     />
