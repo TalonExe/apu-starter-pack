@@ -1,52 +1,47 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+import auditoriums from "../assets/Auditoriums.png";
+import blocks from "../assets/Blocks.png";
+import offices from "../assets/APU-Office.png";
+
 const mapItems = [
   {
     title: "Auditoriums",
-    image: "/src/assets/Auditoriums.png",
+    image: auditoriums.src,
     href: "/apu-starter-pack/map/auditoriums",
   },
   {
     title: "Blocks",
-    image: "/src/assets/Blocks.png",
+    image: blocks.src,
     href: "/apu-starter-pack/map/blocks",
   },
   {
     title: "Offices",
-    image: "/src/assets/APU-Office.png",
+    image: offices.src,
     href: "/apu-starter-pack/map/offices",
   },
 ];
 ---
 
 <Layout title="Maps">
-  <section class="py-10">
-    <div class="mb-10 text-center">
-      <h1 class="text-4xl font-extrabold text-slate-800">
-        Campus Map
-      </h1>
-      <p class="mt-3 text-slate-600">
-        Choose a category to explore important campus locations.
-      </p>
-    </div>
-
-    <div class="grid gap-8 md:grid-cols-3">
+  <section class="min-h-[calc(100vh-80px)] bg-slate-50 ">
+    <div class="grid min-h-[calc(100vh-80px)] grid-cols-1 gap-16 md:grid-cols-3 ">
       {mapItems.map((item) => (
         <a
           href={item.href}
-          class="group overflow-hidden rounded-3xl bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl"
+          class="group relative min-h-[33vh] overflow-hidden md:min-h-[calc(100vh-80px)]"
         >
-          <div class="h-64 overflow-hidden">
-            <img
-              src={item.image}
-              alt={item.title}
-              class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-            />
-          </div>
+          <img
+            src={item.image}
+            alt={item.title}
+            class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          />
 
-          <div class="p-6 text-center">
-            <h2 class="text-2xl font-bold text-slate-800 group-hover:text-green-600">
+          <div class="absolute inset-0 bg-black/35 transition duration-300 group-hover:bg-black/45"></div>
+
+          <div class="absolute inset-0 flex items-center justify-center p-6 text-center">
+            <h2 class="text-3xl font-extrabold text-white drop-shadow-lg md:text-4xl">
               {item.title}
             </h2>
           </div>
