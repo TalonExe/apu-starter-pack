@@ -1,22 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+import nearby1 from "../assets/Stadium-Bukit-Jalil.png";
+import nearby2 from "../assets/Sri-Petaling.png";
+import nearby3 from "../assets/Pavilion-Bukit-Jalil.png";
+import nearby4 from "../assets/Endah-Parade.png";
+
 const nearbyPlaces = [
   {
-    image: "/images/nearby-1.jpg",
-    caption: "Cafes near campus",
+    image: nearby1.src,
+    caption: "Stadium Bukit Jalil",
   },
   {
-    image: "/images/nearby-2.jpg",
-    caption: "Convenience stores",
+    image: nearby2.src,
+    caption: "Bandar Baru Sri Petaling",
   },
   {
-    image: "/images/nearby-3.jpg",
-    caption: "Food spots",
+    image: nearby3.src,
+    caption: "Pavilion Bukit Jalil",
   },
   {
-    image: "/images/nearby-4.jpg",
-    caption: "Hangout areas",
+    image: nearby4.src,
+    caption: "Endah Parade",
   },
 ];
 ---
@@ -39,7 +44,7 @@ const nearbyPlaces = [
           <img
             src={place.image}
             alt={place.caption}
-            class="h-72 w-full object-cover"
+            class="h-72 w-full object-contain"
           />
 
           <figcaption class="p-5 text-center text-xl font-bold text-slate-800">
