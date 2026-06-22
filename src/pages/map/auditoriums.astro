@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro"
 
-
+import auditorium from "../../assets/Auditoriums.png";
 ---
 
 <Layout>
@@ -21,7 +21,7 @@ import Layout from "../../layouts/Layout.astro"
       </p>
 
       <img
-        src="/images/auditoriums.jpg"
+        src={auditorium.src}
         alt="Auditoriums"
         class="mt-8 h-96 w-full rounded-2xl object-cover"
       />

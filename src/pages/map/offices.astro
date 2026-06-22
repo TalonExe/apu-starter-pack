@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro"
 
+import offices from "../../assets/APU-Office.png";
 ---
 
 <Layout>
@@ -20,7 +21,7 @@ import Layout from "../../layouts/Layout.astro"
       </p>
 
       <img
-        src="/images/offices.jpg"
+        src={offices.src}
         alt="Campus offices"
         class="mt-8 h-96 w-full rounded-2xl object-cover"
       />

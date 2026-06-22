@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro"
 
+import blocks from "../../assets/Blocks.png";
 ---
 
 <Layout>
@@ -19,7 +20,7 @@ import Layout from "../../layouts/Layout.astro"
       </p>
 
       <img
-        src="/src/assets/APU-Blocks-map.png"
+        src={blocks.src}
         alt="Campus blocks"
         class="mt-8 w-full rounded-2xl object-cover"
       />
